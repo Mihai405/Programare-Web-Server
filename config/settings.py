@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     #Local
     'apps.products',
     'apps.users',
+    'apps.shop',
 ]
 
 #Change User Auth
@@ -68,9 +69,9 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 #Auth with JWT
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-     'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
-     )
+    #'DEFAULT_AUTHENTICATION_CLASSES': (
+     #'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+     #)
 }
 JWT_AUTH = {
     'JWT_RESPONSE_PAYLOAD_HANDLER': 'apps.users.utils.my_jwt_response_handler'

@@ -20,11 +20,13 @@ from django.urls import path , include
 from rest_framework_jwt.views import obtain_jwt_token
 from apps.products.urls import routes as products_routes
 from apps.users.urls import routes as users_routes
+from apps.shop.urls import routes as shop_routes
 from rest_framework.routers import DefaultRouter
 
 api_routes=[]
 api_routes.append(products_routes)
 api_routes.append(users_routes)
+api_routes.append(shop_routes)
 
 router  =   DefaultRouter()
 
