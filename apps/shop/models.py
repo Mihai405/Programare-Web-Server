@@ -10,6 +10,6 @@ class CartItem(models.Model):
 
 class Order(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    items = models.ManyToManyField(CartItem)
-    price = models.IntegerField()
+    price = models.IntegerField(default=1)
     placedDate = models.DateField(auto_now_add=True)
+    cartItems = models.ManyToManyField(CartItem)

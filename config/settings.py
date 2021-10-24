@@ -69,12 +69,13 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 #Auth with JWT
 REST_FRAMEWORK = {
-    #'DEFAULT_AUTHENTICATION_CLASSES': (
-     #'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
-     #)
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+     'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+     )
 }
 JWT_AUTH = {
-    'JWT_RESPONSE_PAYLOAD_HANDLER': 'apps.users.utils.my_jwt_response_handler'
+    'JWT_RESPONSE_PAYLOAD_HANDLER': 'apps.users.utils.my_jwt_response_handler',
+    'JWT_AUTH_HEADER_PREFIX': 'Bearer',
 }
 
 ROOT_URLCONF = 'config.urls'

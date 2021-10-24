@@ -1,5 +1,6 @@
-from .views import CartItemView
+from .views import CartItemView , OrderView
 
 routes = [
-    (r'marketplace/items',CartItemView),
+    (r'shop/items',CartItemView),
+    (r'shop/orders',OrderView),
 ]
