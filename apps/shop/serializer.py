@@ -26,7 +26,7 @@ class ListCartItemSerializer(serializers.ModelSerializer):
 
     class Meta:
         model=CartItem
-        fields=['id','product','quantity']
+        fields=['id','product','quantity','ordered']
 
 class CreateOrderSerializer(serializers.ModelSerializer):
     user = serializers.PrimaryKeyRelatedField(many=False, read_only=True)
